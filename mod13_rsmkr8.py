@@ -85,7 +85,9 @@ def date_format_ex(x):
     format = "%Y-%m-%d"
     # If date format is correct, return True
     try:
-        y = bool(datetime.datetime.strptime(x, format))
+        # Attempt to convert date string to datetime object
+        # If the date format is incorrect, a ValueError exception will be thrown
+        datetime.datetime.strptime(x, format)
         return True
     # If date format is incorrect, handle exception and return false
     except ValueError:
