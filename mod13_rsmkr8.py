@@ -6,7 +6,8 @@ import datetime
 class SymbolTest(unittest.TestCase):
     # Set up function
     def setUp(self):
-        self.a = "A"
+        # Value to be tested
+        self.a = "AAPL"
     
     # Function to test if characters are letters
     def test_symbol_value(self):
@@ -26,7 +27,8 @@ class SymbolTest(unittest.TestCase):
 class ChartTest(unittest.TestCase):
     # Set up function
     def setUp(self):
-        self.a = 1 
+        # Value to be tested
+        self.a = 2 
     
     # Function to test if the chart input is an integer
     def test_chart_value_type(self):
@@ -40,12 +42,13 @@ class ChartTest(unittest.TestCase):
         # Act
         result = self.a
         # Assert
-        self.assertIn(result, range(1, 2, 1))
+        self.assertIn(result, range(1, 3, 1))
         
 # Class to test the time series input
 class TimeSeriesTest(unittest.TestCase):
     # Set up function
     def setUp(self):
+        # Value to be tested
         self.a = 1
     
     # Function to test if the time series input is an integer
@@ -66,6 +69,7 @@ class TimeSeriesTest(unittest.TestCase):
 class StartDateTest(unittest.TestCase):
     # Set up function
     def setUp(self):
+        # Value to be tested
         self.a = '2000-01-01'
         
     # Function to test if the start date adheres to the correct format
